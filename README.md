@@ -38,7 +38,6 @@ Add the import statement for MobileFFmpeg in your bridging header:
 import UIKit
 
 class ViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
         MobileFFmpegConfig.setLogDelegate(self)
@@ -67,7 +66,6 @@ class ViewController: UIViewController {
         }
     }
 }
-
 extension ViewController:LogDelegate, StatisticsDelegate{
     func statisticsCallback(_ statistics: Statistics!) {
 
