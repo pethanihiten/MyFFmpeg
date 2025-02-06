@@ -36,8 +36,46 @@ Add the import statement for MobileFFmpeg in your bridging header:
 #import <mobileffmpeg/MobileFFmpeg.h>  
 #import <mobileffmpeg/MobileFFmpegConfig.h>
 
+```swift
+import UIKit
 
-<pre> ```swift import UIKit class ViewController: UIViewController { override func viewDidLoad() { super.viewDidLoad() MobileFFmpegConfig.setLogDelegate(self) MobileFFmpegConfig.setStatisticsDelegate(self) MobileFFmpegConfig.resetStatistics() let command = "-i input.mp4 output.avi" callCommand(command: command) } func callCommand(command: String) { DispatchQueue.global(qos: .userInitiated).async { MobileFFmpeg.execute(command) let rc: Int = Int(MobileFFmpeg.getLastReturnCode()) let output = MobileFFmpeg.getLastCommandOutput() if rc == RETURN_CODE_SUCCESS { print("Command execution completed successfully.\n") MobileFFmpeg.cancel() } else if rc == RETURN_CODE_CANCEL { print("Command execution cancelled by user.\n") } else { print("Command execution failed with rc=\(rc) and output=\(String(describing: output!)).\n") } } } } extension ViewController: LogDelegate, StatisticsDelegate { func statisticsCallback(_ statistics: Statistics!) { } func logCallback(_ level: Int32, _ message: String!) { } } ``` </pre>
+class ViewController: UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        MobileFFmpegConfig.setLogDelegate(self)
+        MobileFFmpegConfig.setStatisticsDelegate(self)
+        MobileFFmpegConfig.resetStatistics()
+
+        let command = "-i input.mp4 output.avi"
+        callCommand(command: command)
+    }
+
+    func callCommand(command: String) {
+        DispatchQueue.global(qos: .userInitiated).async {
+            MobileFFmpeg.execute(command)
+
+            let rc: Int = Int(MobileFFmpeg.getLastReturnCode())
+            let output = MobileFFmpeg.getLastCommandOutput()
+            if rc == RETURN_CODE_SUCCESS {
+                print("Command execution completed successfully.\n")
+                MobileFFmpeg.cancel()
+            } else if rc == RETURN_CODE_CANCEL {
+                print("Command execution cancelled by user.\n")
+            } else {
+                print("Command execution failed with rc=\(rc) and output=\(String(describing: output!)).\n")
+            }
+        }
+    }
+}
+
+extension ViewController: LogDelegate, StatisticsDelegate {
+    func statisticsCallback(_ statistics: Statistics!) {
+    }
+
+    func logCallback(_ level: Int32, _ message: String!) {
+    }
+}
+
 
 ## Author
 
