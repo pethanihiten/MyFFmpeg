@@ -31,7 +31,7 @@ Name the file YourProjectName-Bridging-Header.h (replace YourProjectName with yo
 Import MobileFFmpeg in the Bridging Header:
 Add the import statement for MobileFFmpeg in your bridging header:
 
-#import <mobileffmpeg/MobileFFmpeg.h>
+#import <mobileffmpeg/MobileFFmpeg.h>  
 #import <mobileffmpeg/MobileFFmpegConfig.h>
 
 
