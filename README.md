@@ -22,11 +22,12 @@ pod 'MyFFmpeg'
 
 ## USED
 To integrate the MobileFFmpeg class into your Swift project using a bridging header, follow these steps:
-1. Create a Bridging Header:
-If your project doesn't already have a bridging header, you can create one:
-In Xcode, go to File > New > File....
-Select Header File and click Next.
-Name the file YourProjectName-Bridging-Header.h (replace YourProjectName with your actual project name) and click Create.
+
+1. Create a Bridging Header:  
+If your project doesn't already have a bridging header, you can create one:  
+In Xcode, go to File > New > File....  
+Select Header File and click Next.  
+Name the file YourProjectName-Bridging-Header.h (replace YourProjectName with your actual project name) and click Create.  
 
 Import MobileFFmpeg in the Bridging Header:
 Add the import statement for MobileFFmpeg in your bridging header:
