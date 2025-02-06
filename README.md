@@ -24,6 +24,7 @@ pod 'MyFFmpeg'
 To integrate the MobileFFmpeg class into your Swift project using a bridging header, follow these steps:
 
 1. Create a Bridging Header:  
+
 If your project doesn't already have a bridging header, you can create one:  
 In Xcode, go to File > New > File....  
 Select Header File and click Next.  
@@ -36,18 +37,18 @@ Add the import statement for MobileFFmpeg in your bridging header:
 #import <mobileffmpeg/MobileFFmpegConfig.h>
 
 
-import UIKit
+import UIKit  
 
-class ViewController: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        MobileFFmpegConfig.setLogDelegate(self)
-        MobileFFmpegConfig.setStatisticsDelegate(self)
-        MobileFFmpegConfig.resetStatistics()
+class ViewController: UIViewController {  
+    override func viewDidLoad() {  
+        super.viewDidLoad()  
+        MobileFFmpegConfig.setLogDelegate(self)  
+        MobileFFmpegConfig.setStatisticsDelegate(self)  
+        MobileFFmpegConfig.resetStatistics()  
 
-        let command = "-i input.mp4 output.avi"
-        callCommand(command: command)
-    }
+        let command = "-i input.mp4 output.avi"  
+        callCommand(command: command)  
+    }  
 
     func callCommand(command:String){
         DispatchQueue.global(qos: .userInitiated).async {
