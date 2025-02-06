@@ -1,0 +1,17 @@
+CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO
+CONFIGURATION_BUILD_DIR = ${PODS_CONFIGURATION_BUILD_DIR}/MyFFmpeg
+EXCLUDED_ARCHS[sdk=iphonesimulator*] = arm64
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/../../Frameworks"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+LIBRARY_SEARCH_PATHS = $(inherited) "${TOOLCHAIN_DIR}/usr/lib/swift/${PLATFORM_NAME}" /usr/lib/swift
+OTHER_LDFLAGS = $(inherited) -ObjC -l"bz2" -l"c++" -l"z" -framework "AVFoundation" -framework "AudioToolbox" -framework "CoreMedia" -framework "VideoToolbox" -framework "expat" -framework "fontconfig" -framework "freetype" -framework "fribidi" -framework "giflib" -framework "gmp" -framework "gnutls" -framework "jpeg" -framework "kvazaar" -framework "lame" -framework "libaom" -framework "libass" -framework "libavcodec" -framework "libavdevice" -framework "libavfilter" -framework "libavformat" -framework "libavutil" -framework "libcharset" -framework "libhogweed" -framework "libiconv" -framework "libilbc" -framework "libnettle" -framework "libogg" -framework "libopencore-amrnb" -framework "libopencore-amrwb" -framework "libpng" -framework "libsndfile" -framework "libswresample" -framework "libswscale" -framework "libtheora" -framework "libtheoradec" -framework "libtheoraenc" -framework "libuuid" -framework "libvidstab" -framework "libvorbis" -framework "libvorbisenc" -framework "libvorbisfile" -framework "libvpx" -framework "libwebp" -framework "libwebpdecoder" -framework "libwebpdemux" -framework "libxml2" -framework "mobileffmpeg" -framework "opus" -framework "shine" -framework "snappy" -framework "soxr" -framework "speex" -framework "tiff" -framework "twolame" -framework "wavpack" -framework "x264" -framework "x265" -framework "xvidcore"
+OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS
+PODS_BUILD_DIR = ${BUILD_DIR}
+PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+PODS_DEVELOPMENT_LANGUAGE = ${DEVELOPMENT_LANGUAGE}
+PODS_ROOT = ${SRCROOT}
+PODS_TARGET_SRCROOT = ${PODS_ROOT}/../..
+PODS_XCFRAMEWORKS_BUILD_DIR = $(PODS_CONFIGURATION_BUILD_DIR)/XCFrameworkIntermediates
+PRODUCT_BUNDLE_IDENTIFIER = org.cocoapods.${PRODUCT_NAME:rfc1034identifier}
+SKIP_INSTALL = YES
+USE_RECURSIVE_SCRIPT_INPUTS_IN_SCRIPT_PHASES = YES

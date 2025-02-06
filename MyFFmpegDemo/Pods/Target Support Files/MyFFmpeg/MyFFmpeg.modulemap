@@ -1,0 +1,6 @@
+framework module MyFFmpeg {
+  umbrella header "MyFFmpeg-umbrella.h"
+
+  export *
+  module * { export * }
+}

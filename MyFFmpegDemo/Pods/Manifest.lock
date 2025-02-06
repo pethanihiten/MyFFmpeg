@@ -1,0 +1,16 @@
+PODS:
+  - MyFFmpeg (0.1.5)
+
+DEPENDENCIES:
+  - MyFFmpeg (from `../`)
+
+EXTERNAL SOURCES:
+  MyFFmpeg:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  MyFFmpeg: 5bda38ceb951ac3a7a8f6351812b5b3a8e7290b6
+
+PODFILE CHECKSUM: 1afa8d7e8bb6b855b6c1dd52101ae70f613c677e
+
+COCOAPODS: 1.16.2
