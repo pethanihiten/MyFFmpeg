@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'MyFFmpeg'
-    s.version          = '0.1.5'
+    s.version          = '0.1.0'
     s.swift_version    = '5'
     s.homepage         = 'https://github.com/pethanihiten/MyFFmpeg.git'
     s.license          = { :type => 'MIT', :file => 'LICENSE' }
