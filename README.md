@@ -75,7 +75,7 @@ extension ViewController: LogDelegate, StatisticsDelegate {
     func logCallback(_ level: Int32, _ message: String!) {
     }
 }
-
+```
 
 ## Author
 
